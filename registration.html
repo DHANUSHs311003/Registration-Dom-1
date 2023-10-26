@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registration</title>
+    <style>
+         .main {
+            display: flex;
+            justify-content: center;
+            justify-content: space-around;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            
+        }
+        #name {
+            height: 35px;
+            font-size: 25px;
+            margin-right: 30px;
+            border-radius: 10px;
+            border-color:cornflowerblue;
+        }
+        #name:hover {
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            border-color: aqua;
+        }
+        #gender {
+            height: 35px;
+            font-size: 25px;
+            border-radius: 10px;
+            border-color:cornflowerblue;
+        }
+        #gender:hover {
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            border-color: aqua;
+        }
+        #email {
+            height: 35px;
+            font-size: 20px;
+            margin-right: 30px;
+            border-radius: 10px;
+            border-color:cornflowerblue;
+
+        }
+        #email:hover {
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            border-color: aqua;
+        }
+        #mobile {
+            height: 35px;
+            font-size: 25px;
+            margin-right: 30px;
+            border-radius: 10px;
+            border-color:cornflowerblue;
+
+        }
+        #mobile:hover {
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            border-color: aqua;
+        }
+        .but {
+            height: 35px;
+            width: auto;
+            font-size: 25px;
+            border-radius: 10px;
+            border-color:cornflowerblue;
+            margin-left: 30px;
+            padding: auto;
+            background-color:whitesmoke ;
+            
+        }
+
+        .but:hover {
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            border-color: aqua;
+            background-color:cornsilk;
+            height: 40px;
+            width: auto;
+        }
+
+        .main-2 {
+            display: flex;
+            justify-content: center;
+            justify-content: space-around;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+	<div class="main">
+    <input type="text" name="name" id="name" placeholder="Enter your name">
+	<select id="gender">
+		<option value="">---</option>
+		<option value="male">male</option>
+		<option value="female">female</option>
+	</select>
+	<input type="text" name="email" id="email" placeholder="Enter your email-id">
+	<input type="number" name="mobile" id="mobile" placeholder="Enter your phone no.">
+    </div>
+	<hr>
+	<h1 id="dName">NAME</h1>
+	<h2 id="dGender">GENDER</h2>
+	<h3 id="dEmail">EMAIL</h3>
+	<h4 id="dMobile">MOBILE</h4>
+	<hr>
+	<div class="main-2">
+    <button onclick="showName()" class="but">NAME</button>
+	<button onclick="showGender()"  class="but">GENDER</button>
+	<button onclick="showEmail()"  class="but">EMAIL</button>
+	<button onclick="showMobile()"  class="but">MOBILE</button>
+	<button onclick="resetForm()"  class="but">RESET FORM</button>
+	<button onclick="resetDisplay()"  class="but">RESET DISPLAY</button>
+    </div>
+	<script type="text/javascript">
+        let inpN = document.getElementById("name");
+        let inpG= document.getElementById("gender");
+        let inpE=document.getElementById("email");
+        let inpP=document.getElementById("mobile");
+        let h1N=document.getElementById("dName");
+        let h2G=document.getElementById("dGender");
+        let h3E=document.getElementById("dEmail");
+        let h4P=document.getElementById("dMobile");
+		function showName() {
+			// Show filled name inside h1
+            h1N.innerText="NAME: " +inpN.value;
+		}
+
+		function showGender() {
+			// Show the selected gender inside h2
+            h2G.innerText= "GENDER: "+inpG.value;
+		}
+
+		function showEmail() {
+			// Show the filled email inside h3
+            h3E.innerText= "EMAIL: "+inpE.value;
+		}
+
+		function showMobile() {
+			// Show the filled mobile inside h4
+            h4P.innerText= "NOBILE: "+inpP.value;
+		}
+
+		function resetForm() {
+			// Reset all the form elements to default values (blank "")
+           inpN.value="";
+           inpG.value="";
+           inpE.value="";
+           inpP.value="";
+		}
+
+		function resetDisplay() {
+			// Reset all the headings (h1, h2, h3, h4) to blank values
+           inpN.value="";
+           inpG.value="";
+           inpE.value="";
+           inpP.value="";
+           h1N.innerText="";
+           h2G.innerText="";
+           h3E.innerText="";
+           h4P.innerText="";
+
+		}
+	</script>
+</body>
+</html>
